@@ -22,8 +22,9 @@ button{border:none;background-color:transparent;cursor:pointer;}
 /* layout setting */
 body{width:100%;height: 100%;}
 #wrapper{width:1440px;height: 100%;margin:0 50px;}
-section{border: 1px solid #333;}
 .flex{display: flex;justify-content: space-between;}
+/* common setting */
+button{width: 214px;height: 64px;border-radius: 40px 5px;}
 
 /* text setting */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -43,17 +44,16 @@ h6{font-weight: 400;font-size: 10px;}/* h6 텍스트xs */
 /* --header----------------------------------------------------- */
 header{height: 933px;}
 /* ----navigation----------------------------------------------- */
-nav{position: relative;border: 1px solid #333;}
+nav{position: relative;}
 #gnb{top:0;margin-top:20px;height:38px;line-height: 38px;}/* background: rgba(252, 252, 252, 1) !important; position:sticky;*/
 .gnbmenu{width: 381px;}
 .gnbmenu a{color: white;}
 /* ----content-------------------------------------------------- */
 .backbg{position: absolute;right: 0;width:744px;height: 933px;background-image: url('../img/city/building_bg.png');}
-.headercontent{position: relative;margin: 118px 0 0 20px; border: 1px solid #333;}
+.headercontent{position: relative;margin: 118px 0 0 20px;}
 .headercontent>div:first-of-type{font-size: 64px;line-height: 120%;letter-spacing: -4%;}
 .headercontent div:not(.buttons){margin-bottom:40px;}
 .headercontent .buttons{margin-bottom:90px;}
-.headercontent .buttons button{width: 214px;height: 64px;border-radius: 40px 5px;}
 .headercontent .buttons button:first-of-type{background-color: var(--bl);}
 .headercontent .buttons button:last-of-type{border: 1px solid var(--bl);background-color: white;}
 .headercontent .stats{width: 577px;}
@@ -69,13 +69,55 @@ nav{position: relative;border: 1px solid #333;}
 main{position: relative;}
 .logos{height: 180px;margin: 14px 0 140px;background-color: #FAFAFA;border-radius: 150px;}
 .logos ul{padding: 81px 74px;}
+/* ----section 1------------------------------------------------ */
+.section_choose section:first-of-type{height: 195px;margin-bottom: 109px;}
+.section_choose section:first-of-type div{padding-top: 37px;width: 541px;}
+.section_choose section:first-of-type h1{width: 521px;margin-left: 91px;}
+.section_choose button{background-color: var(--bl);margin-top: 30px;}
+
+.section_choose section{justify-content: left;}
+.section_choose section:last-of-type ul{margin: 145px 0 0 68px;}
+.section_choose section:last-of-type ul li{display: flex;margin-bottom: 142px;}
+.section_choose section:last-of-type ul div{width: 119px;margin-right: 20px;}
+.section_choose section:last-of-type ul div p{top: -29px; left:26px;position: relative;}
+.section_choose section:last-of-type ul img{position: absolute;}
+.section_choose section:last-of-type ul p{position: relative;font-weight: 600;font-size: 72px;}
+/* ----section 2------------------------------------------------ */
+.section_engineer{text-align: center;margin-top: 140px;}
+.section_engineer .title{margin-bottom: 80px;}
+.section_engineer .title h1{margin-bottom: 30px;}
+
+.section_engineer ul{width: 1170px;margin: auto;}
+.section_engineer ul li{width: 362px;height: 435px;padding-bottom: 60px;background-color: white;border-radius: 5px;box-shadow: 0px 20px 50px 0px rgba(198,217,225,0.3);}
+.section_engineer ul li div{width:302px;height: 23px;display: flex;margin: auto;padding-top: 29px;}
+.staricon{background-image: url('../img/icon/star.png');background-repeat: no-repeat;cursor: pointer;}
+.doticon{background-image: url('../img/icon/more_dot3.png');background-repeat: no-repeat;background-position: right;cursor: pointer;}
+.section_engineer ul li img{margin: 70px 0 22px;}
+.section_engineer ul li p{font-weight: 500;font-size: 24px;margin-bottom: 42px;}
+.section_engineer ul li span{font-size: 12px;color: var(--gr);}
+.section_engineer ul li a{display: block;margin-bottom: 8px;}
+/* 40A2D5 */
+.section_engineer .nxtbtn{background-color: white;width: 120px;height: 66px;margin: 80px auto 0;border-radius: 65px;box-shadow: 0px 64.81px 46.85px 0px rgba(64,162,213,0.075),0px 38.52px 25.48px 0px rgba(64,162,213,0.06),0px 20px 13px 0px rgba(64,162,213,0.05),0px 8.15px 6.52px 0px rgba(64,162,213,0.039),0px 1.85px 3.15px 0px rgba(64,162,213,0.024);}
+.section_engineer .nxtbtn a{display: inline-block;width: 50px;height: 50px;border-radius: 40px;margin-top: 8px;position: relative;}
+.section_engineer .nxtbtn a img{padding: 19px 13px;}
+.section_engineer .nxtbtn a:last-of-type{background-color: var(--bl);}
+/* ----section 3------------------------------------------------ */
+.section_message{width: 100%;height: 939px;position:relative;margin-top: 140px;background-image: url(../img/city/construction2.png);}
+/* width: 1039px;height: 526px; */
+.section_message .txtblock{color: white;margin: auto;padding-top:176px;width: 857px;height:462px;}
+.section_message .txtblock h1{text-align: center;margin-bottom: 50px;}
+.section_message .txtblock h4{line-height: 28px;}
+.quaicon_l{width:91px;height:64px;background-image: url(../img/figure/quotes_left.png);position: absolute;left:201px;top:238px;}
+.quaicon_r{width:91px;height:64px;background-image: url(../img/figure/quotes_right.png);position: absolute;left: 1141px;top:638px;}
+/* ----section 4------------------------------------------------ */
+
 /* ------------------------------------------------end of main-- */
 
 
 /* --footer----------------------------------------------------- */
 footer{bottom:0;width: 100%;height: 356px;margin-top:600px;}
 .footer{display: flex;}
-.footer .footertxt{width: 236px;background-color: #40A2D5;}
+.footer .footertxt{width: 236px;background-color: var(--bl);}
 .footer .footertxt .sociallink{width: 117px;}
 .footer .footermenu{width: 715px;height: 227px;}
 footer hr{margin: 68px 0 40px 0;height: 1px;color: #F4F4F4;}
