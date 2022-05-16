@@ -18,6 +18,7 @@ img,fieldset{border:none;vertical-align:middle;}
 strong,em,b,i,address{font-weight:normal;font-style:normal;}
 table{border-collapse:collapse;}
 button{border:none;background-color:transparent;cursor:pointer;}
+textarea{font-family: inherit;font-size: inherit;}
 
 /* layout setting */
 body{width:100%;height: 100%;}
@@ -25,6 +26,9 @@ body{width:100%;height: 100%;}
 .flex{display: flex;justify-content: space-between;}
 /* common setting */
 button{width: 214px;height: 64px;border-radius: 40px 5px;}
+[class*="section"]{margin: 140px auto 0;}
+[class*="section"] .title{margin-bottom: 80px;}
+[class*="section"] .title h1{margin-bottom: 30px;}
 
 /* text setting */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -49,7 +53,7 @@ nav{position: relative;}
 .gnbmenu{width: 381px;}
 .gnbmenu a{color: white;}
 /* ----content-------------------------------------------------- */
-.backbg{position: absolute;right: 0;width:744px;height: 933px;background-image: url('../img/city/building_bg.png');}
+.backbg{width:744px;height: 933px;background-image: url('../img/city/building_bg.png');position: absolute;right: 0;}/* 왜 고정 안되고 자꾸 움직이지?? */
 .headercontent{position: relative;margin: 118px 0 0 20px;}
 .headercontent>div:first-of-type{font-size: 64px;line-height: 120%;letter-spacing: -4%;}
 .headercontent div:not(.buttons){margin-bottom:40px;}
@@ -70,6 +74,7 @@ main{position: relative;}
 .logos{height: 180px;margin: 14px 0 140px;background-color: #FAFAFA;border-radius: 150px;}
 .logos ul{padding: 81px 74px;}
 /* ----section 1------------------------------------------------ */
+.section_choose{width: 1173px;}
 .section_choose section:first-of-type{height: 195px;margin-bottom: 109px;}
 .section_choose section:first-of-type div{padding-top: 37px;width: 541px;}
 .section_choose section:first-of-type h1{width: 521px;margin-left: 91px;}
@@ -83,12 +88,10 @@ main{position: relative;}
 .section_choose section:last-of-type ul img{position: absolute;}
 .section_choose section:last-of-type ul p{position: relative;font-weight: 600;font-size: 72px;}
 /* ----section 2------------------------------------------------ */
-.section_engineer{text-align: center;margin-top: 140px;}
-.section_engineer .title{margin-bottom: 80px;}
-.section_engineer .title h1{margin-bottom: 30px;}
+.section_engineer{text-align: center;width: 1170px;}
 
-.section_engineer ul{width: 1170px;margin: auto;}
-.section_engineer ul li{width: 362px;height: 435px;padding-bottom: 60px;background-color: white;border-radius: 5px;box-shadow: 0px 20px 50px 0px rgba(198,217,225,0.3);}
+.section_engineer ul{margin: auto;}
+.section_engineer ul li{width: 362px;height: 435px;padding-bottom: 60px;background-color: white;border-radius: 5px;box-shadow: 0px 20px 50px 0px rgba(198,217,225,0.3);margin-left: 15px;}
 .section_engineer ul li div{width:302px;height: 23px;display: flex;margin: auto;padding-top: 29px;}
 .staricon{background-image: url('../img/icon/star.png');background-repeat: no-repeat;cursor: pointer;}
 .doticon{background-image: url('../img/icon/more_dot3.png');background-repeat: no-repeat;background-position: right;cursor: pointer;}
@@ -96,32 +99,64 @@ main{position: relative;}
 .section_engineer ul li p{font-weight: 500;font-size: 24px;margin-bottom: 42px;}
 .section_engineer ul li span{font-size: 12px;color: var(--gr);}
 .section_engineer ul li a{display: block;margin-bottom: 8px;}
-/* 40A2D5 */
+
+#outerslide{overflow-x: scroll;display: flex;scroll-behavior: smooth;}
+#outerslide::-webkit-scrollbar{display: none;}
 .section_engineer .nxtbtn{background-color: white;width: 120px;height: 66px;margin: 80px auto 0;border-radius: 65px;box-shadow: 0px 64.81px 46.85px 0px rgba(64,162,213,0.075),0px 38.52px 25.48px 0px rgba(64,162,213,0.06),0px 20px 13px 0px rgba(64,162,213,0.05),0px 8.15px 6.52px 0px rgba(64,162,213,0.039),0px 1.85px 3.15px 0px rgba(64,162,213,0.024);}
 .section_engineer .nxtbtn a{display: inline-block;width: 50px;height: 50px;border-radius: 40px;margin-top: 8px;position: relative;}
 .section_engineer .nxtbtn a img{padding: 19px 13px;}
 .section_engineer .nxtbtn a:last-of-type{background-color: var(--bl);}
 /* ----section 3------------------------------------------------ */
-.section_message{width: 100%;height: 939px;position:relative;margin-top: 140px;background-image: url(../img/city/construction2.png);}
+.section_message{width: 100%;height: 939px;position:relative;background-image: url(../img/city/construction2.png);}
 /* width: 1039px;height: 526px; */
 .section_message .txtblock{color: white;margin: auto;padding-top:176px;width: 857px;height:462px;}
 .section_message .txtblock h1{text-align: center;margin-bottom: 50px;}
 .section_message .txtblock h4{line-height: 28px;}
+
 .quaicon_l{width:91px;height:64px;background-image: url(../img/figure/quotes_left.png);position: absolute;left:201px;top:238px;}
 .quaicon_r{width:91px;height:64px;background-image: url(../img/figure/quotes_right.png);position: absolute;left: 1141px;top:638px;}
 /* ----section 4------------------------------------------------ */
+.section_contact{text-align: center;width: 1305px;}
+.backmap{position: absolute;right: 0;width: 782px;height: 500px;background-image: url('../img/city/map.png');background-size: cover;}
 
+.section_contact form{display: flex;flex-direction: column;width: 489px;}
+.section_contact form input, textarea{background-color: #F9F9F9;border: none; border-radius: 7px;margin-bottom: 20px;height: 64px;padding-left:24px;font-weight: 400;font-size: 18px;}
+.section_contact form input[name="name"]{background-color: white;border: 1px solid #F4F4F4;padding-left:24px;}
+.section_contact form textarea {padding-top: 24px;}
+.section_contact button{background-color: var(--bl);}
+/* ----section 5------------------------------------------------ */
+.section_blog{text-align: center;width: 1153px;}
+.scroll_imgblock{height: 467px;overflow-y: scroll;width: 1052px;margin: auto;display: flex;justify-content:space-between;flex-wrap: wrap;}
+.scroll_imgblock::-webkit-scrollbar{width: 2px;background-color:none;}
+.scroll_imgblock::-webkit-scrollbar-track{width: 2px;background-color: #CBCBCB;}
+.scroll_imgblock::-webkit-scrollbar-thumb{border-width: 9px;height: 53px;background-color: #40A2D5;}/* 스크롤바에서 thumb가 더 크게 어떻게 하지?? */
+.scroll_imgblock li{width:calc(100%/2);height: 467px;background-repeat: no-repeat;margin-bottom: 60px;}
+.scroll_imgblock li p{color: white;}
+.scroll_imgblock li p:first-of-type{font-weight: 700;font-size: 27px;padding-bottom: 22px;margin-top: 50%;}
+.scroll_imgblock li p:last-of-type{font-weight: 400;font-size: 16px;padding-bottom: 36px;}
+.scroll_imgblock li button{border: 1px solid white;}
 /* ------------------------------------------------end of main-- */
 
 
 /* --footer----------------------------------------------------- */
 footer{bottom:0;width: 100%;height: 356px;margin-top:600px;}
-.footer{display: flex;}
-.footer .footertxt{width: 236px;background-color: var(--bl);}
+.footer{display: flex;justify-content: space-between;width: 1130px;margin: auto;}
+
+.footer .footertxt{width: 236px;}
+.footer .footertxt>p{font-size: 25px;margin-bottom: 30px;text-align: left;}
+.footer .footertxt>h5{color: var(--gr);margin-bottom: 40px;}
 .footer .footertxt .sociallink{width: 117px;}
+.footer .footertxt .sociallink li{background-color: var(--bl);border-radius: 7px;}
+
 .footer .footermenu{width: 715px;height: 227px;}
-footer hr{margin: 68px 0 40px 0;height: 1px;color: #F4F4F4;}
-footer p{text-align: center;font-weight: 500;font-size: 14px;color: #C2C2C2;}
+.footer .footermenu li h4{margin-bottom: 39px;}
+.footer .footermenu li ul{width: 125px;height: 150px;color: var(--gr);display: flex;flex-direction: column;justify-content: space-between;}
+.footer .footermenu li:last-of-type div{width: 174px;height: 40px;padding: 8px;box-sizing: border-box;background-color: #F4F4F4;border-radius: 4px;display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+.footer .footermenu li:last-of-type div input{border: none;background-color: #F4F4F4;display: inline-block;font-weight: 400;font-size: 10px;}
+.footer .footermenu li:last-of-type div img{width: 16px;height: 16px;}
+
+footer hr{margin: 68px 0 40px 0;border: none;height: 1px;background-color: #F4F4F4;}
+footer p{padding-bottom: 40px;text-align: center;font-weight: 500;font-size: 14px;color: #C2C2C2;}
 /* ----------------------------------------------end of footer-- */
 
 
